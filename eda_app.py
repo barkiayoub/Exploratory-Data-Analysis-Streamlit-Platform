@@ -20,7 +20,7 @@ st.set_page_config(
 st.markdown("""
     <style>
         .main {
-            background-color: #f0f2f6;
+            background-color: #dark;
         }
         .report-container {
             max-width: 100%;
@@ -36,17 +36,15 @@ st.markdown("""
 
 # Title of the web app
 st.markdown("""
-# **Exploratory Data Analysis (EDA) App**
-
-- This app is developed by **Adil Naeem** called **EDA app**. 
-- This app helps you to perform EDA on your dataset. Let's get started!
+# **Exploratory Data Analysis (EDA) App** 
+            
             
 """)
 
 # Add image file to the app with a size of 800x800
-image = Image.open(r'C:\Users\BARKI\Desktop\Chaos\Projects\Exploratory-Data-Analysis-Streamlit-Platform\data.jpg')
-image_width = 800 # image_width = st.slider("Image Width", min_value=700, max_value=800, value=700, step=5)
-st.image(image, width=image_width)
+# image = Image.open(r'C:\Users\BARKI\Desktop\Chaos\Projects\Exploratory-Data-Analysis-Streamlit-Platform\data.jpg')
+# image_width = 800 # image_width = st.slider("Image Width", min_value=700, max_value=800, value=700, step=5)
+# st.image(image, width=image_width)
 
 # Sidebar for user interactions
 st.sidebar.header("Instructions")
@@ -68,7 +66,31 @@ def load_data(file):
 # Function to generate profile report
 @st.cache_data
 def generate_profile_report(dataframe):
-    return ProfileReport(dataframe, explorative=True)
+    profile = ProfileReport(dataframe, explorative=True, title="Your Report Title", dark_mode=True)
+    return profile
+
+    # # Save report to an HTML file
+    # profile.to_file("profile_report.html")
+
+    # # Read the HTML file and inject custom CSS for full dark mode
+    # with open("profile_report.html", "r", encoding="utf-8") as file:
+    #     custom_html = file.read()
+
+    # # Inject additional CSS to enforce a dark background
+    # dark_mode_css = """
+    # <style>
+    #     body, .report-container {
+    #         background-color: #121212 !important;
+    #         color: #ffffff !important;
+    #     }
+    #     .navbar, .header, .footer {
+    #         background-color: #1e1e1e !important;
+    #     }
+    # </style>
+    # """
+
+    # # Display the modified report in Streamlit
+    # st.components.v1.html(dark_mode_css + custom_html, height=800, scrolling=True)
 
 # If file is uploaded, load data and display profiling report
 if uploaded_file is not None:
