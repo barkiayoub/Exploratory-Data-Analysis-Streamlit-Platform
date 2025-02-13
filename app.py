@@ -32,8 +32,8 @@ st.markdown("""
 
 # Title of the web app
 st.markdown("""
-# **Exploratory Data Analysis Plateform**             
-            
+# **Exploratory Data Analysis Plateform**  
+   **Upload your dataset and generate an interactive EDA report!**                    
 """)
 
 st.sidebar.header("Upload your CSV file")
@@ -64,12 +64,19 @@ if uploaded_file is not None:
     df = load_data(uploaded_file)
     st.header('**Input DataFrame**')
     st.write(df)
+    profile_html = generate_profile_report(df).to_html()
 
     st.header('**Profiling Report**')
-    profile_report = generate_profile_report(df)
-    profile_html = profile_report.to_html()
-    components.html(profile_html, height=1000, scrolling=True)
+    # Download button to download the HTML report
+    st.download_button(
+        label="Download Report as HTML",
+        data=profile_html,
+        file_name="EDA_Report.html",
+        mime="text/html"
+    )
 
+    components.html(profile_html, height=1000, scrolling=True)
+    
 # If no file is uploaded, display info and offer example dataset
 else:
     st.sidebar.info('Awaiting for CSV file to be uploaded...')
