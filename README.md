@@ -6,13 +6,11 @@ The Exploratory Data Analysis (EDA) App is a Streamlit-based web application tha
 
 This project simplifies the process of exploratory data analysis. Leveraging the power of [Streamlit](https://streamlit.io) for interactive web interfaces and [ydata_profiling](https://github.com/ydata-ai/ydata-profiling) for generating detailed profiling reports, the app enables quick insights into your data—all in one place. 
 
-## Demo
-
-Below is a GIF demonstrating how to use the app:
-
-![App Demo](Demo\EDA-App-Demo.webm)
-
-*Replace "path/to/your-demo.gif" with the actual path or URL to your GIF.*
+## Overview
+#### Plafteform with uploaded CSV
+![Plafteform with uploaded CSV](Overview/Plateform%20with%20uploaded%20csv.png)
+#### Plafteform with uploaded CSV
+![Analysis Overview](Overview/Overview%20of%20the%20analysis.png)
 
 ## Features
 
@@ -42,7 +40,7 @@ To run the EDA App:
 
 1. **Start the App with Streamlit**
    ```bash
-   streamlit run eda_app.py
+   streamlit run app.py
    ```
 
 2. **Interact with the Application**
@@ -51,28 +49,15 @@ To run the EDA App:
    - An interactive profiling report will be generated below the data preview.
    - If no file is uploaded, click on "Press to use Example Dataset" in the sidebar to analyze a randomly generated dataset.
 
-<!-- ## Demo
-
-Below is a GIF demonstrating how to use the app:
-
-![App Demo](path/to/your-demo.gif)
-
-*Replace "path/to/your-demo.gif" with the actual path or URL to your GIF.*
-
-## Screenshots
-
-Add a screenshot of the application (for example, the provided `data.jpg`) to showcase the UI:
-
-![App Screenshot](data.jpg) -->
-
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
 For any questions or feedback, please reach out via:
 
 - **GitHub**: [barkiayoub](https://github.com/barkiayoub)
+- **LinkedIn**: [barkiayoub](https://www.linkedin.com/in/barkiayoub/)
 
 Happy Analyzing!
