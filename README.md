@@ -7,12 +7,11 @@ The Exploratory Data Analysis (EDA) App is a Streamlit-based web application tha
 This project simplifies the process of exploratory data analysis. Leveraging the power of [Streamlit](https://streamlit.io) for interactive web interfaces and [ydata_profiling](https://github.com/ydata-ai/ydata-profiling) for generating detailed profiling reports, the app enables quick insights into your data—all in one place. 
 
 ## Overview
-#### Plafteform with uploaded CSV
-![Plafteform with uploaded CSV](Overview/Plateform%20with%20uploaded%20csv.png)
-#### Plafteform with uploaded CSV
-![Analysis Overview](Overview/Overview%20of%20the%20analysis.png)
 
+https://github.com/user-attachments/assets/20914ebf-dda2-408a-a674-ef6cb28b5867
 ## Features
+
+
 
 - **CSV File Upload**: Easily upload your dataset in CSV format.
 - **Data Preview**: View your dataset in a neat table format.
